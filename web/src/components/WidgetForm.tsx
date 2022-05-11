@@ -11,7 +11,23 @@ const feedbackTypes: Array<any> = [
         title: 'Problema',
         image: {
             source: bugImageURL,
-            alt: 'Problema'
+            alt: 'Imagem de um inseto'
+        }
+    },
+    {
+        name:"IDEIA",
+        title: 'Ideia',
+        image: {
+            source: ideiaImageURL,
+            alt: 'Imagem de uma lâmpada'
+        }
+    },
+    {
+        name:"OTHER",
+        title: 'Other',
+        image: {
+            source: thoughtImageURL,
+            alt: 'Imagem de um balão de pensamento'
         }
     }
 ];
@@ -29,8 +45,6 @@ export function WidGetForm() {
 
         <div className=" flex py-8 gap-2 w-full">
             { feedbackTypes.map((value:any, index:number) => {
-                console.log('Key', index);
-                // console.log('value', value);
                 
                 return (
                     <button key={index}>
