@@ -1,9 +1,10 @@
+import { useState } from "react";
+
 import { CloseButton } from "./CloseButton";
 
 import bugImageURL from '../assets/images/bug.svg'
 import ideiaImageURL from "../assets/images/ideia.svg";
 import thoughtImageURL from "../assets/images/thought.svg";
-import { useState } from "react";
 
 
 const feedbackTypes: Array<any> = [
@@ -38,7 +39,6 @@ export function WidGetForm() {
   const [ feedBackTypes, setFeedBackType] = useState<any>(undefined);
 
   return (
-    
     <>
     <div
       className="
@@ -85,4 +85,4 @@ export function WidGetForm() {
     </div>
     </>
   );
-}
+};
