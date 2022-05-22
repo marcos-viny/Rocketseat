@@ -5,15 +5,19 @@ import { FeedBackTypes, feedbackTypes } from "./ConstFeedbackTypes";
 
 interface FeedbackContentStepProps{
     feedbackType: FeedBackTypes;
+    onFeedbackRestartRequested: () => void;
 }
 
-export function FeedBackContentStep({feedbackType}: FeedbackContentStepProps){
+export function FeedBackContentStep({feedbackType, onFeedbackRestartRequested}: FeedbackContentStepProps){
     const feedbackTypeInfo = feedbackTypes[feedbackType]
     return(
         <>
         <header>
-            <button type="button" className=" top-5 left-5 absolute">
-                <ArrowLeft weight="bold" className=" h-4 w-4"/>
+            <button
+             type="button"
+             className=" top-5 left-5 absolute"
+             onClick={onFeedbackRestartRequested}>
+                <ArrowLeft weight="bold" className=" h-4 w-4 hover:text-brand-500 transition-colors"/>
             </button>
 
             <span className="text-xl leading-6 flex items-center gap-2">
@@ -23,9 +27,16 @@ export function FeedBackContentStep({feedbackType}: FeedbackContentStepProps){
             </span>
             <CloseButton />
         </header>
-        <div className="flex py-8 gap-2 w-full">
-         
-      </div>
+        
+        <form className=" my-4 w-full">
+            <textarea
+                className=" 
+                 min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400text-zinc-100
+               border-zinc-600 bg-transparent rounded-md border-2 outline-none
+                 focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none"
+                placeholder="Conte-nos o que está acontecendo..."
+            />
+        </form>
         </>
     );
 }

@@ -8,6 +8,10 @@ import { FeedBackTypeStep } from "./steps/FeedbackTypeStep";
 export function WidGetForm() {
   const [feedBackType, setFeedBackType] = useState<FeedBackTypes | null>(null);
 
+  function handleRestartFeedBack(){
+    setFeedBackType(null);
+  };
+
   return (
     <>
     <div
@@ -18,7 +22,8 @@ export function WidGetForm() {
       {!feedBackType ? (
         <FeedBackTypeStep onFeedbackTypeChange={setFeedBackType} />
       ) : (
-        <FeedBackContentStep feedbackType={feedBackType}/>
+        <FeedBackContentStep feedbackType={feedBackType}
+        onFeedbackRestartRequested={handleRestartFeedBack}/>
       )}
 
       <footer className="text-xs text-neutral-400">
