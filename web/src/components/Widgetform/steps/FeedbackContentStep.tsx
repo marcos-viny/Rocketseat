@@ -36,6 +36,16 @@ export function FeedBackContentStep({feedbackType, onFeedbackRestartRequested}: 
                  focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none"
                 placeholder="Conte-nos o que está acontecendo..."
             />
+
+            <footer className=" flex gap-2 mt-2">
+                <button
+                 type="submit"
+                 className=" p-2 bg-brand-500 rounded-[0.250rem] border-transparent flex-1 flex justify-center
+                            items-center text-sm hover:bg-brand-300 transition-colors focus:outline-none
+                            focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 ">
+                            Enviar feedBack
+                </button>
+            </footer>
         </form>
         </>
     );
