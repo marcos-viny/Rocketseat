@@ -55,7 +55,8 @@ export function FeedBackContentStep({
                 className=" 
                  min-w-[304px] w-full min-h-[112px] text-sm placeholder-zinc-400text-zinc-100
                border-zinc-600 bg-transparent rounded-md border-2 outline-none
-                 focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none p-2"
+               focus:border-brand-500 focus:ring-brand-500 focus:ring-1 resize-none p-2
+                 scrollbar-thin scrollbar-thumb-zinc-700 scrollbar-track-transparent"
                 placeholder="Conte-nos o que está acontecendo..."
                 onChange={event => setComment(event.target.value)}
             />
