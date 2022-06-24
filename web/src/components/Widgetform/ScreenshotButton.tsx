@@ -2,7 +2,8 @@ import html2canvas from "html2canvas";
 import { backgroundPosition } from "html2canvas/dist/types/css/property-descriptors/background-position";
 import { Camera, Trash } from "phosphor-react";
 import { useState } from "react";
-import { Loading } from "../loading";
+import { Loading } from "../Loading";
+
 
 interface ScreenshotButtonProps{
     onScreenshotTook: (screenshot: string | null) => void;
